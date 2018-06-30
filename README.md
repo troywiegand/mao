@@ -42,3 +42,38 @@ This will be an ultimate collection of Mao Rules
 
 ### Reverse Reverse 
 * If a player plays a `4` on top of a `4` the "original rule" happens twice and is effectively nullified.
+
+
+------------------------------------------------------------------------
+### Meow
+* A player must 'meow' whenever the second `6` is played.
+
+### Woof
+* A player must 'woof' whenever a `3` is played.
+
+### Yee Haw
+* Whenever a player plays a card that change the color (red=>black or black=>red) they must say "Yee Haw"
+
+### Giddy Up
+* Whenever a player plays a `K` , `Q` , or `J` on another one of those three they must say "Giddy Up"
+
+### Slap Jack
+* Whenever a player plays a `J` they must slap the pile of played cards.
+
+### Naughty, Naughty 
+* At any time a player may play any `9` on top of a `6` if they say "Naughty Naughty"
+
+### Tax Break 
+* If a player has more cards in their hand then the highest rank of their cards they play any time if they say "Tax Break"
+
+### Raise 'Em
+* If a player plays a `5` then each player must raise their hand, the last player to raise their hand as determined by the `5` playing player must draw a card
+
+### Thank you
+* Anytime a player recieves a penalty they must say "thank you"
+
+### Sandwiches!
+* If a player creates a sandwhich on the stack they must slap the table.
+
+### Scream
+* If a player plays a `9` or a `10` they must scream
