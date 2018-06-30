@@ -31,3 +31,14 @@ This will be an ultimate collection of Mao Rules
 
 ### Thanking Satan
 * If a player plays the third `6` in a row they must proclaim "Thank You Satan". The number of `6` for the purposes of this rule resets after it triggers. 
+
+## 6/29/2018 
+
+### Waluigi 
+* Player must exclaim "WaLuigi!" whenever they play a `5`.
+
+### i++
+* Player must say 'i++' when a card of the next highest rank is played
+
+### Reverse Reverse 
+* If a player plays a `4` on top of a `4` the "original rule" happens twice and is effectively nullified.
