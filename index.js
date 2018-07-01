@@ -2,7 +2,7 @@ class App{
     constructor(){
         this.OurRules=[]
         this.ourRulesListFiller()
-        console.log(this.OurRules)
+        this.AllRules=[]
         this.list=document.querySelector('#rulesList')
         this.rulesButton= document.querySelector('#ourRules')
         this.rulesButton.addEventListener('click', (ev)=>{
@@ -55,17 +55,18 @@ class App{
             const item = document.createElement('li')
             item.classList.add('rule')
 
+            const span=document.createElement('div')
             const thisRule=this.OurRules[i]
             const TitleHead = document.createElement('h3')
             TitleHead.classList.add('ruleTitle')
             TitleHead.textContent=thisRule['title']
-            item.appendChild(TitleHead)
+            span.appendChild(TitleHead)
 
             const desc = document.createElement('p')
             desc.classList.add('ruleDesc')
             desc.textContent=thisRule['rule']
-            item.appendChild(desc)
-
+            span.appendChild(desc)
+            item.appendChild(span)
             this.list.appendChild(item)
 
         }
