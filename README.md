@@ -63,9 +63,6 @@ This will be an ultimate collection of Mao Rules
 ### Naughty, Naughty 
 * At any time a player may play any `9` on top of a `6` if they say "Naughty Naughty"
 
-### Tax Break 
-* If a player has more cards in their hand then the highest rank of their cards they play any time if they say "Tax Break"
-
 ### Raise 'Em
 * If a player plays a `5` then each player must raise their hand, the last player to raise their hand as determined by the `5` playing player must draw a card
 
