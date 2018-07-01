@@ -52,7 +52,7 @@ This will be an ultimate collection of Mao Rules
 * A player must 'woof' whenever a `3` is played.
 
 ### Yee Haw
-* Whenever a player plays a card that change the color (red=>black or black=>red) they must say "Yee Haw"
+* Whenever a player plays a card that change the color (♠/♣ => ♥/♦ or ♥/♦ => ♠/♣) they must say "Yee Haw"
 
 ### Giddy Up
 * Whenever a player plays a `K` , `Q` , or `J` on another one of those three they must say "Giddy Up"
