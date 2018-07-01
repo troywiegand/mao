@@ -14,7 +14,7 @@ This will be an ultimate collection of Mao Rules
 ### Bowser
 * Player must yell "Buah-Hah-hah!" whenever they play a `2` after a `4` or `3` was just played.
 
-### wowe
+### wow
 * Player must say "wow" whenever the exact same card.
 
 ### Hello
