@@ -23,7 +23,7 @@ ul {
     transform: scale(1.1);
   }
 
-  h3{
+  .title{
     padding: 0;
     size: 117%;
     color: whitesmoke;

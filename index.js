@@ -7,7 +7,7 @@ class App{
         this.rulesButton= document.querySelector('#ourRules')
         this.rulesButton.addEventListener('click', (ev)=>{
             ev.preventDefault()
-            this.ourRulesListRender()
+            this.ourRulesArray()
 
         })
     }
@@ -39,6 +39,16 @@ class App{
 
     }
 
+    ourRulesArray(){
+        for(let i=0; i<this.OurRules.length; i++)
+        {
+        this.AllRules.push(this.OurRules[i])
+        const item=this.renderItem(this.OurRules[i])
+        this.list.appendChild(item)    
+
+        }
+    }
+
     newRule(title,rulesText){
 
         const rule= {
@@ -47,8 +57,54 @@ class App{
         }
         
         return rule
-
     }
+    renderItem(rule) {
+        const item = document.createElement('li')
+        item.classList.add('rule')
+      
+        // get the list of properties
+        const properties = Object.keys(rule)
+      
+        // loop over the properties
+        properties.forEach((propertyName) => {
+          // build a span, and append it to the list
+          const span = this.renderProperty(propertyName, rule[propertyName])
+          item.appendChild(span)
+        })
+      
+        item.appendChild(this.deleteButtonGenerator(rule,item))
+                  
+        return item
+      }
+        
+        renderProperty(name, value) {
+            const span = document.createElement('span')
+            
+            span.classList.add(name)
+            span.textContent = value
+        
+            return span
+          }
+
+          deleteButtonGenerator(rule, item){
+            const button=document.createElement('button')
+            button.classList.add('delete')
+            button.innerHTML='<i class="far fa-trash-alt"></i>' 
+                  button.addEventListener('click', (ev)=>{
+                    this.removeRule(rule, item)
+                })
+            return button
+          }
+
+          removeRule(rule, item) {
+            // remove from the UI
+            this.list.removeChild(item)
+          
+            // remove from the array
+            const i = this.AllRules.indexOf(rule)
+            this.AllRules.splice(i, 1)
+    
+          }
 
     ourRulesListRender(){
         for(let i=0; i<this.OurRules.length; i++){
