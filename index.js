@@ -61,7 +61,7 @@ class App{
     renderItem(rule) {
         const item = document.createElement('li')
         item.classList.add('rule')
-      
+        const div=document.createElement('div')
         // get the list of properties
         const properties = Object.keys(rule)
       
@@ -69,8 +69,10 @@ class App{
         properties.forEach((propertyName) => {
           // build a span, and append it to the list
           const span = this.renderProperty(propertyName, rule[propertyName])
-          item.appendChild(span)
+          div.appendChild(span)
         })
+
+        item.appendChild(div)
       
         item.appendChild(this.deleteButtonGenerator(rule,item))
                   
@@ -82,6 +84,12 @@ class App{
             
             span.classList.add(name)
             span.textContent = value
+       
+            if(name==='title'){
+             
+                const br=document.createElement('br')
+                span.appendChild(br)
+            }
         
             return span
           }
