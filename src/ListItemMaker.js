@@ -8,7 +8,9 @@ class ListItemMaker extends Component{
         <li>
             <h3>{this.props.title} </h3>
             <p>{this.props.rule}</p>
-             </li>
+            <button> Remove Rule</button>
+
+        </li>
         </div>)}
 
 
