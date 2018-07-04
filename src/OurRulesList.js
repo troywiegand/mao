@@ -18,7 +18,7 @@ this.state={RulesArray: []}
             this.fillOldRuleArray()}} id="ourRules">Our Rules</button>
         <ul id="rulesList">
        { this.state.RulesArray.map((currentRule,i)=>{
-           return <ListItemMaker title={currentRule.title} rule={currentRule.rule} key={i} />
+           return <ListItemMaker removeRule={this.removeRule} title={currentRule.title} ruleObj={currentRule} rule={currentRule.rule} key={i} />
        }) }
         </ul>
         </div>)}
@@ -60,8 +60,17 @@ fillOldRuleArray(){
         OurRules.push(this.newRule('Scream','If a player plays a `9` or a `10` they must scream'))
 
 this.setState({RulesArray: OurRules})
+localStorage.setItem('stringyArray', JSON.stringify(this.state.RulesArray));
 
+}
 
+removeRule= (ruleObj) => {
+    let cutArray=[...this.state.RulesArray]
+    const cutNumber = this.state.RulesArray.lastIndexOf(ruleObj)
+    cutArray.splice(cutNumber,1)
+    localStorage.setItem('stringyArray', JSON.stringify(cutArray));
+
+    this.setState({RulesArray: cutArray})
 }
 
 

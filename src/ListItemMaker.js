@@ -6,14 +6,9 @@ class ListItemMaker extends Component{
         this.state={alive: true}
     }
 
-    ruleKiller(){
-        if(this.state.alive){
-            this.setState({alive: false})
-        }
-    }
+
 
     render(){
-        if(this.state.alive){
         return ( 
         <div>
         <li>
@@ -21,12 +16,11 @@ class ListItemMaker extends Component{
             <p>{this.props.rule}</p>
             <button onClick={(ev) =>{
                 ev.preventDefault()
-                this.ruleKiller()}}> 
+                this.props.removeRule(this.props.ruleObj)}}> 
                 Remove Rule</button>
 
         </li>
-        </div>)}
-        return null
+        </div>)
     }
 
 
