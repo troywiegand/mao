@@ -60,7 +60,6 @@ fillOldRuleArray(){
         OurRules.push(this.newRule('Scream','If a player plays a `9` or a `10` they must scream'))
 
 this.setState({RulesArray: OurRules})
-localStorage.setItem('stringyArray', JSON.stringify(this.state.RulesArray));
 
 }
 
