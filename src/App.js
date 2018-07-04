@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div className="App">
     <center><h1>The Game of Mao</h1>
-    <CustomRule RulesArray={this.state.RulesArray}/>
+    <CustomRule RulesArray={this.state.RulesArray} addRule={this.addRule}/>
     <OurRulesList RulesArray={this.state.RulesArray} fillOld={this.fillOldRuleArray} removeRule={this.removeRule}/>
     </center>
       </div>
@@ -26,7 +26,7 @@ class App extends Component {
 
   fillOldRuleArray=()=>{
 
-    const OurRules=[]
+    const OurRules=[...this.state.RulesArray]
         OurRules.push(this.newRule('Open/Closed Parenthesis','Whenever a nonnumber card is played, it becomes illegal to play any number cards until another one is played." whenever they play a `3`.'))
         OurRules.push(this.newRule('Mario','Player must exclaim "MARIO!" whenever they play a `3`.'))
         OurRules.push(this.newRule('Luigi','Player must exclaim "Luigi!" whenever they play a `4`.'))
@@ -51,6 +51,9 @@ class App extends Component {
         OurRules.push(this.newRule('Sandwiches!','If a player creates a sandwhich on the stack they must slap the table.'))
         OurRules.push(this.newRule('Scream','If a player plays a `9` or a `10` they must scream'))
 
+
+localStorage.setItem('stringyArray', JSON.stringify(OurRules));
+
 this.setState({RulesArray: OurRules})
 
 }
@@ -72,6 +75,14 @@ removeRule= (ruleObj) => {
   localStorage.setItem('stringyArray', JSON.stringify(cutArray));
 
   this.setState({RulesArray: cutArray})
+}
+
+addRule= (ruleObj) => {
+  let addArray=[...this.state.RulesArray]
+  addArray.push(ruleObj)
+  localStorage.setItem('stringyArray', JSON.stringify(addArray));
+
+  this.setState({RulesArray: addArray})
 }
 
 
