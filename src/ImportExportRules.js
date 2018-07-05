@@ -2,9 +2,14 @@ import React, { Component } from 'react';
 
 class ImportExportRules extends Component{
 
-    state={
-        importString: '',
-        export: '',
+   
+
+    constructor(){
+        super()
+        this.state={
+            importString: '',
+            export: '',
+        }
     }
 
     handleSubmit = (ev) => {
@@ -21,12 +26,19 @@ class ImportExportRules extends Component{
         this.handleString()
     }
 
-    handleString = ()=>{
-        console.log(this.props.RulesArray)
-        const stringy=JSON.stringify(this.props.RulesArray)
-        console.log(stringy)
-        this.setState({export: JSON.stringify(this.props.RulesArray)})
+    test = (ev)=>{
+       this.handleClick(ev)
+       this.copyText() 
+    }
 
+    handleString = ()=>{
+        this.setState({export: JSON.stringify(this.props.RulesArray)})
+    }
+
+    copyText = ()=>{
+        const copyText = document.getElementById("exportString")
+        copyText.select()
+        document.execCommand('copy')
     }
 
     render(){
@@ -45,11 +57,11 @@ class ImportExportRules extends Component{
             </span>
 
             <span>
-                <button onClick={this.handleClick}>
-                    Get String for Export
+                <button onClick={this.test}>
+                    Generate String to Export
                 </button>
 
-                <p>{this.state.export}</p>
+                <input id="exportString" value={this.state.export}></input>
 
             </span>
 
