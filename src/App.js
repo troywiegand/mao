@@ -17,7 +17,7 @@ class App extends Component {
       <div className="App">
     <center><h1>The Game of Mao</h1>
     <CustomRule RulesArray={this.state.RulesArray} addRule={this.addRule}/>
-    <OurRulesList RulesArray={this.state.RulesArray} fillOld={this.fillOldRuleArray} removeRule={this.removeRule}/>
+    <OurRulesList RulesArray={this.state.RulesArray} fillOld={this.fillOldRuleArray} importRules={this.importRules} removeRule={this.removeRule}/>
     </center>
       </div>
       
@@ -83,6 +83,12 @@ addRule= (ruleObj) => {
   localStorage.setItem('stringyArray', JSON.stringify(addArray));
 
   this.setState({RulesArray: addArray})
+}
+
+importRules =(s)=> {
+const importedArray=JSON.parse(s)
+this.setState({RulesArray: importedArray})
+
 }
 
 

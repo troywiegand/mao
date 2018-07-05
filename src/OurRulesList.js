@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ListItemMaker from './ListItemMaker';
+import ImportExportRules from './ImportExportRules'
 
 class OurRulesList extends Component{
 
@@ -17,6 +18,7 @@ class OurRulesList extends Component{
         <button onClick={(ev)=>{
             ev.preventDefault()
             this.props.fillOld()}} id="ourRules">Our Rules</button>
+        <ImportExportRules RulesArray={this.props.RulesArray}importRules={this.props.importRules}/>
         </div>)}
 
  
