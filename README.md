@@ -1,6 +1,5 @@
 # Mao
-This will be an ultimate collection of Mao Rules
-
+This will be an ultimate collection of Mao Rules and a tool to create and share lists of Mao rules.
 
 ### Open/Closed Parenthesis
 * Whenever a nonnumber card is played, it becomes illegal to play any number cards until another one is played.
