@@ -28,7 +28,15 @@ class ImportExportRules extends Component{
 
 
     handleString = ()=>{
+        if(this.props.RulesArray[0]!==undefined)
+        {
         this.setState({export: JSON.stringify(this.props.RulesArray)})
+        }   
+        else
+        {
+        alert("You need to have rules in your List to export it!")
+        }  
+
     }
 
     copyText = ()=>{
@@ -42,6 +50,7 @@ class ImportExportRules extends Component{
 
         return(
             <div className="ImportExportRules">
+            <h3> Export/Import Rules Lists </h3>
             <span>
             <form onSubmit={this.handleSubmit}>
             <input 
@@ -54,7 +63,7 @@ class ImportExportRules extends Component{
             </span>
 
             <span>
-                <button onClick={this.handleClick}>
+                <button className="export" onClick={this.handleClick}>
                     Generate String to Export
                 </button>
 

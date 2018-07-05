@@ -14,7 +14,7 @@ class ListItemMaker extends Component{
         <li>
             <h3>{this.props.title} </h3>
             <p>{this.props.rule}</p>
-            <button onClick={(ev) =>{
+            <button className="remove" onClick={(ev) =>{
                 ev.preventDefault()
                 this.props.removeRule(this.props.ruleObj)}}> 
                 Remove Rule</button>
