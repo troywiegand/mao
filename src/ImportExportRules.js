@@ -26,10 +26,6 @@ class ImportExportRules extends Component{
         this.handleString()
     }
 
-    test = (ev)=>{
-       this.handleClick(ev)
-       this.copyText() 
-    }
 
     handleString = ()=>{
         this.setState({export: JSON.stringify(this.props.RulesArray)})
@@ -39,6 +35,7 @@ class ImportExportRules extends Component{
         const copyText = document.getElementById("exportString")
         copyText.select()
         document.execCommand('copy')
+        alert('The Export String is in your Clipboard.')
     }
 
     render(){
@@ -57,11 +54,11 @@ class ImportExportRules extends Component{
             </span>
 
             <span>
-                <button onClick={this.test}>
+                <button onClick={this.handleClick}>
                     Generate String to Export
                 </button>
 
-                <input id="exportString" value={this.state.export}></input>
+                <input id="exportString" value={this.state.export} onClick={this.copyText}></input>
 
             </span>
 
