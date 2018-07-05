@@ -7,8 +7,8 @@ class App extends Component {
 
   constructor(){
     super()
-    
-    this.state={RulesArray: []}
+    const Start=( JSON.parse(localStorage.getItem('stringyArray')) || [])
+    this.state={RulesArray: Start}
     
     }
 
