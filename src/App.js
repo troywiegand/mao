@@ -9,7 +9,7 @@ class App extends Component {
   constructor(){
     super()
     this.state={RulesArray: [],
-                importExportString : ''}
+                importExportString : ' '}
     
     }
 
@@ -25,10 +25,12 @@ class App extends Component {
 
     componentWillMount(){
 
-        debugger
-        const randomString = this.exportStringGenerator()
+      const StringforExport=this.exportStringGenerator()
 
-             base.syncState(randomString,{
+        this.setState({importExportString: StringforExport}) 
+
+        console.log(this.state.importExportString)
+             base.syncState(this.state.importExportString,{
                   context: this,
                   state: 'RulesArray',
                  asArray: true,
@@ -106,9 +108,12 @@ addRule= (ruleObj) => {
 
 importRules =(s)=> {
 
-  
-
-this.setState({RulesArray: importedArray})
+  this.setState({importExportString: s})
+  base.syncState(this.state.importExportString,{
+    context: this,
+    state: 'RulesArray',
+   asArray: true,
+})
 
 }
 
