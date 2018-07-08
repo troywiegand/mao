@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "hyper-statusline": "^1.7.6",
+    "re-base": "^3.2.3",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
