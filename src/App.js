@@ -8,8 +8,8 @@ class App extends Component {
 
   constructor(){
     super()
-    const Start=( JSON.parse(localStorage.getItem('stringyArray')) || [])
-    this.state={RulesArray: Start}
+    this.state={RulesArray: [],
+                importExportString : ''}
     
     }
 
@@ -75,8 +75,6 @@ class App extends Component {
         OurRules.push(this.newRule('Scream','If a player plays a `9` or a `10` they must scream'))
 
 
-localStorage.setItem('stringyArray', JSON.stringify(OurRules));
-
 this.setState({RulesArray: OurRules})
 
 }
@@ -95,7 +93,6 @@ removeRule= (ruleObj) => {
   let cutArray=[...this.state.RulesArray]
   const cutNumber = this.state.RulesArray.lastIndexOf(ruleObj)
   cutArray.splice(cutNumber,1)
-  localStorage.setItem('stringyArray', JSON.stringify(cutArray));
 
   this.setState({RulesArray: cutArray})
 }
@@ -103,13 +100,14 @@ removeRule= (ruleObj) => {
 addRule= (ruleObj) => {
   let addArray=[...this.state.RulesArray]
   addArray.push(ruleObj)
-  localStorage.setItem('stringyArray', JSON.stringify(addArray));
 
   this.setState({RulesArray: addArray})
 }
 
 importRules =(s)=> {
-const importedArray=JSON.parse(s)
+
+  
+
 this.setState({RulesArray: importedArray})
 
 }
