@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import OurRulesList from './OurRulesList'
 import CustomRule from './CustomRule'
+import base from './base'
 
 class App extends Component {
 
@@ -11,6 +12,28 @@ class App extends Component {
     this.state={RulesArray: Start}
     
     }
+
+    exportStringGenerator() {
+      let text = "";
+      let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    
+      for (let i = 0; i < 5; i++)
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    
+      return text;
+    }
+
+    componentWillMount(){
+
+        debugger
+        const randomString = this.exportStringGenerator()
+
+             base.syncState(randomString,{
+                  context: this,
+                  state: 'RulesArray',
+                 asArray: true,
+             })
+           }
 
   render() {
     return (
