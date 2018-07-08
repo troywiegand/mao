@@ -23,19 +23,15 @@ class ImportExportRules extends Component{
 
     handleClick= (ev)=>{
         ev.preventDefault()
+        
         this.handleString()
     }
 
 
     handleString = ()=>{
-        if(this.props.RulesArray[0]!==undefined)
-        {
-        this.setState({export: JSON.stringify(this.props.RulesArray)})
-        }   
-        else
-        {
-        alert("You need to have rules in your List to export it!")
-        }  
+       
+        this.setState({export: this.props.importExportString})
+        console.log(this.props.importExportString)
 
     }
 
@@ -43,8 +39,9 @@ class ImportExportRules extends Component{
         const copyText = document.getElementById("exportString")
         copyText.select()
         document.execCommand('copy')
-        alert('The Export String is in your Clipboard.')
     }
+
+   
 
     render(){
 

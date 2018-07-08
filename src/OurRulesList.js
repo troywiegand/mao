@@ -18,7 +18,9 @@ class OurRulesList extends Component{
         <button onClick={(ev)=>{
             ev.preventDefault()
             this.props.fillOld()}} id="ourRules">Add Our Rules to Your List!</button>
-        <ImportExportRules RulesArray={this.props.RulesArray}importRules={this.props.importRules}/>
+        <ImportExportRules RulesArray={this.props.RulesArray}
+        importRules={this.props.importRules}
+        importExportString={this.props.stringForImportExport}/>
         </div>)}
 
  
