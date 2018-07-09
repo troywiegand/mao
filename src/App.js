@@ -110,13 +110,13 @@ addRule= (ruleObj) => {
 
 importRules =(s)=> {
 
-  this.setState({importExportString: s})
-  base.syncState(this.state.importExportString,{
+  this.setState({importExportString: s}, () => {base.syncState(this.state.importExportString,{
     context: this,
     state: 'RulesArray',
    asArray: true,
 })
-
+})
+  
 }
 
 
