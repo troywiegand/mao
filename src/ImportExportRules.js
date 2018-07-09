@@ -39,6 +39,7 @@ class ImportExportRules extends Component{
         const copyText = document.getElementById("exportString")
         copyText.select()
         document.execCommand('copy')
+        this.setState({importString: ''})
     }
 
    
