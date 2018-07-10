@@ -29,12 +29,15 @@ class App extends Component {
 
         this.setState({importExportString: StringforExport}) 
 
-        console.log(this.state.importExportString)
-             base.syncState(this.state.importExportString,{
+             this.ref = base.syncState(this.state.importExportString,{
                   context: this,
                   state: 'RulesArray',
                  asArray: true,
              })
+           }
+
+           componentWillUnmount(){
+             base.removeBinding(this.ref)
            }
 
   render() {
