@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {Route , Switch, Redirect} from 'react-router-dom'
+
 
 import MainList from './MainList';
 
@@ -10,7 +12,19 @@ super()
 
 render(){
     return(
-        <MainList />
+        <Switch>
+            <Route
+            path='/rules-list'
+            component={MainList}
+            />
+            <Route
+            render={()=>{
+                return(
+                    <Redirect to='/rules-list'/>
+                )
+            }}
+            />
+        </Switch>
     )
 }
 
