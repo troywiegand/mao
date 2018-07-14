@@ -6,7 +6,8 @@
     "hyper-statusline": "^1.7.6",
     "re-base": "^3.2.3",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
     "react-scripts": "1.0.3"
