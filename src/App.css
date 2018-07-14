@@ -1,0 +1,65 @@
+ul {
+    list-style-type: none;
+  }
+  
+  html{
+    background-color: rgb(39, 34, 34);
+    color: rgb(252, 255, 45);
+  }
+  
+  h1{
+    color: rgb(255, 8, 0);
+  }
+  
+  h3{
+    color: rgb(255, 8, 0);
+  }
+  
+  button.remove{
+    size: 93%;
+    border: 0;
+    padding: 0.75rem 0.8rem;
+    transition: background-color .25s ease-out, transform .1s ease-out;
+    cursor: pointer;
+    background-color: rgb(172, 0, 0);
+    color: whitesmoke;
+  }
+  
+  button{
+    size: 93%;
+    border: 0;
+    padding: 0.75rem 0.8rem;
+    transition: background-color .25s ease-out, transform .1s ease-out;
+    cursor: pointer;
+    background-color: rgb(25, 129, 60);
+    color: whitesmoke;
+  }
+  
+  button.export{
+    background-color: rgb(136, 100, 0);
+  }
+  
+  button#ourRules{
+    background-color: rgb(33, 3, 117);
+  }
+  
+  button:hover{
+    transform: scale(1.1);
+  }
+  
+  .title{
+    padding: 0;
+    size: 117%;
+    color: whitesmoke;
+  }
+  
+  div{
+    border: box;
+    border: 2px solid #ac01ac;
+    border-radius: 4px;
+    background-color: rgb(39, 34, 34);
+  }
+  
+  p{
+    color: whitesmoke
+  }
