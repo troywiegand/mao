@@ -9,7 +9,7 @@ class App extends Component {
   constructor(){
     super()
     this.state={RulesArray: [],
-                importExportString : ' '}
+                importExportString : this.exportStringGenerator()}
     
     }
 
@@ -24,10 +24,6 @@ class App extends Component {
     }
 
     componentWillMount(){
-
-      const StringforExport=this.exportStringGenerator()
-
-        this.setState({importExportString: StringforExport}) 
 
              this.ref = base.syncState(this.state.importExportString,{
                   context: this,
