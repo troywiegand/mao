@@ -3,6 +3,7 @@ import {Route , Switch, Redirect} from 'react-router-dom'
 
 
 import MainList from './MainList';
+import About from './About'
 
 class App extends Component {
 constructor()
@@ -18,9 +19,13 @@ render(){
             component={MainList}
             />
             <Route
+            path='/about'
+            component={About}
+            />
+            <Route
             render={()=>{
                 return(
-                    <Redirect to='/rules-list'/>
+                    <Redirect to='/about'/>
                 )
             }}
             />
