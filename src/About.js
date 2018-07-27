@@ -9,20 +9,13 @@ class About extends Component {
   render() {
     return (
       <div className="About">
-    <center><h1>The Game of Mao</h1>
+    <center><h1>mod 8 Bowling</h1>
     <p> 
-        The game of Mao is very unconventional. 
-        Imagine playing Uno, but with a standard 52 card deck. 
-        There's some extra rules, but you'll figure them out as you go. 
+        mod 8 Bowling is a modification of standard bowling created by Dr. Scott Kaschner at Butler University. 
     </p>
         
         <br />
         
-        <p> If you would like to manage a Rules List:
-           <NavLink to={"/rules-list"}>  
-             Click Here 
-            </NavLink>
-        </p>
     </center>
       </div>
       
