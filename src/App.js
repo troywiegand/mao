@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Route , Switch, Redirect} from 'react-router-dom'
 
 
+import MainList from './MainList';
 import About from './About'
 
 class App extends Component {
@@ -13,6 +14,10 @@ super()
 render(){
     return(
         <Switch>
+            <Route
+            path='/rules-list'
+            component={MainList}
+            />
             <Route
             path='/about'
             component={About}
